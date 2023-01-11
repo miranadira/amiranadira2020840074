@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<body style ="background-color:#F3CFC6"> 
+<a name="first_anchor"> </a>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+<body>
+
+<h2>Gallery</h2>
+<p>Bit cute!</p>
+
+<div class="navbar">
+  <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="biodata.html"> Biodata</a>  
+  <a href="experience.html"> Experience</a> 
+  <a href="education.html"> Education</a> 
+  <a href="family.html"> Family</a>
+  <a href="gallery.html"> Gallery</a>
+  <a href="places i wish to go.html"> Places I wish To Go</a>
+  
+</div>
+
+<br><br><br>
+Click to play the music
+<audio controls autoplay>
+  <source src="assest/images/music.mp3" type="audio/mpeg"> 
+Your browser does not support the audio element.
+</audio>
+<br><br><br>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header" id="myHeader">
+  <h1>Memories</h1>
+  <p>Click on the buttons to change the grid view.</p>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">4</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="assest/images/me.jpg" style="width:100%">
+    <img src="assest/images/me_2.jpg" style="width:100%">
+    <img src="assest/images/me_3.jpg" style="width:100%">
+    <img src="assest/images/family.jpg" style="width:100%">
+    <img src="assest/images/family_2.jpg" style="width:100%">
+    <img src="assest/images/class.jpg" style="width:100%">
+    <img src="assest/images/class_2.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="assest/images/class_3.jpg" style="width:100%">
+    <img src="assest/images/class_4.jpg" style="width:100%">
+    <img src="assest/images/class_5.jpg" style="width:100%">
+    <img src="assest/images/me_4.jpg" style="width:100%">
+    <img src="assest/images/me_5.jpg" style="width:100%">
+    <img src="assest/images/class_6.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="assest/images/food.jpg" style="width:100%">
+    <img src="assest/images/food_2.jpg" style="width:100%">
+    <img src="assest/images/food_3.jpg" style="width:100%">
+    <img src="assest/images/food_4.jpg" style="width:100%">
+    <img src="assest/images/food_5.jpg" style="width:100%">
+    <img src="assest/images/food_6.jpg" style="width:100%">
+    <img src="assest/images/food_7.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="assest/images/class_7.jpg" style="width:100%">
+    <img src="assest/images/class_8.jpg" style="width:100%">
+    <img src="assest/images/class_9.jpg" style="width:100%">
+    <img src="assest/images/me_6.jpg" style="width:100%">
+    <img src="assest/images/me_7.jpg" style="width:100%">
+    <img src="assest/images/me_8.jpg" style="width:100%">
+  </div>
+</div>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<a href="#first_anchor"> Go to Top </a>
+</body>
+</html> 
+
+
